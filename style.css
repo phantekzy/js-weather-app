@@ -1,0 +1,228 @@
+/* Importing custom font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap');
+
+/* Global Styles */
+* {
+  font-family: 'Cormorant Garamond', serif;
+  box-sizing: border-box;
+}
+
+/* Center the main container in the viewport */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main weather container styles */
+.container {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  min-height: 500px;
+  border-radius: 20px;
+  background: linear-gradient(270deg, #3a8dde, #6cc2ff, #3a8dde);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+}
+
+/* Animated background gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Top input and title */
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Search input container */
+.input-search {
+  position: relative;
+  max-width: 200px;
+}
+
+/* Styling the input box */
+.input-search input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: #FFF;
+  font-size: 1rem;
+  background: rgba(26, 36, 33, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background 3s ease, transform 2s ease;
+}
+
+/* Focus animation for input */
+.input-search input:focus {
+  background: black;
+  transform: scale(1.1);
+}
+
+/* Placeholder color */
+.input-search input::placeholder {
+  color: #FFF;
+}
+
+/* Search icon position */
+.input-search .fa-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Hide icon on focus */
+.input-search input:focus + .fa-search {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Center weather info vertically */
+.info-icon {
+  display: grid;
+  place-items: center;
+}
+
+/* Weather image icon */
+.weathericon {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Temperature style */
+.temperature {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Location style */
+.location {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Date style */
+.date {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Info card grid layout */
+.info-weather {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-flow: row;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  margin: 40px auto;
+  color: black;
+}
+
+/* Individual weather metric card */
+.info-weather div {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Icon style */
+.info-weather i {
+  position: relative;
+  margin-top: 20px;
+  font-size: 45px;
+  color: rgba(26, 36, 33, 0.6);
+  transition: 2s, transform 2s ease;
+}
+
+/* Icon hover animation */
+.info-weather i:hover {
+  color: black;
+  transform: scale(1.4);
+}
+
+/* Value text style */
+.info-weather h1 {
+  font-size: 1.2rem;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 110%;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(270deg, #3a8dde, #6cc2ff, #3a8dde);
+    padding: 1rem;
+  }
+
+  .container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .input-search {
+    max-width: 90%;
+  }
+
+  .input-search input {
+    height: 50px;
+  }
+
+  .temperature {
+    font-size: 5rem;
+  }
+
+  .location {
+    font-size: 55px;
+  }
+
+  .date {
+    font-size: 24px;
+  }
+
+  .feelslike {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 25px;
+  }
+
+  .info-weather i {
+    margin: 20px;
+    font-size: 55px;
+  }
+}
+

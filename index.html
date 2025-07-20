@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather app by phantekzy</title>
+
+    <!-- External styles and scripts -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <!-- FontAwesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512‑<copy‑from‑cdnjs>"
+      crossorigin="anonymous"
+      referrerpolicy="no‑referrer"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Search Input -->
+      <div class="input-group">
+        <h2>Phantekzy</h2>
+        <div class="input-search">
+          <input id="userLocation" type="text" placeholder="What's your location?" />
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+
+      <!-- Weather Info Display -->
+      <div class="info-group">
+        <div class="info-icon">
+          <div class="location">Hadjout</div>
+          <div class="date">thu 18 februry</div>
+          <div class="weathericon"></div>
+          <div class="temperature">30°</div>
+          <div class="feelslike">5°/6° feelslike 2°</div>
+          <div class="description">Partly cloudy</div>
+        </div>
+
+        <!-- Weather Metrics Cards -->
+        <div class="info-weather">
+          <div class="humidity">
+            Humidity
+            <i class="fa-solid fa-water"></i>
+            <h1 id="HValue">69%</h1>
+          </div>
+          <div class="wind-speed">
+            Wind speed
+            <i class="fa-solid fa-wind"></i>
+            <h1 id="WValue">69 km/h</h1>
+          </div>
+          <div class="clouds">
+            Clouds
+            <i class="fa-solid fa-cloud"></i>
+            <h1 id="CValue">69%</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
