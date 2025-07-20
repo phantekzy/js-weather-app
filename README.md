@@ -26,9 +26,9 @@ This is a simple weather application built using HTML, CSS, and vanilla JavaScri
 1. Clone the repository:
    git clone https://github.com/phantekzy/js-weather-app.git
    
-2.Open the index.html file in your browser.
+2. Open the index.html file in your browser.
 
-3.Enter a city name in the search box and press Enter or click the search icon to get the weather data.
+3. Enter a city name in the search box and press Enter or click the search icon to get the weather data.
 
 - PS :
 You will need an API key from WeatherAPI to make this app work. Replace the placeholder key in script.js with your own if necessary.
